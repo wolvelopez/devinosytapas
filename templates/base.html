@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block titulo%}
+		    deVinosyTapas 
+		{% endblock %}
+    </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Añadimos Bootstrap -->
+	<link rel="stylesheet" href="{{STATIC_URL}}/css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="{{STATIC_URL}}/css/bootstrap-responsive.css" type="text/css" media="screen">
+	<script type="text/javascript" href="{{STATIC_URL}}/js/bootstrap.js"></script>
+	<!-- Añadimos JQuery -->
+	<script type="text/javascript" href="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+	<div class="navbar">
+	    <div class="navbar-inner">
+	    <a class="brand" href="#">dV&T</a>
+	    <ul class="nav">
+		    <li class="active"><a href="/">Home</a></li>
+		    <li><a href="/lista">Posts</a></li>
+		    <li><a href="/acerca/de/">Contacto</a></li>
+	    </ul>
+	    </div>
+    </div>
+
+    <div class="container">
+	    <div class="hero-unit">
+	    	<h1>Bienvenidos al blog deVinosyTapas</h1>
+	    	<p></p>
+	    </div>   
+
+	    <div class="row">	       	
+	        {% block contenido %}
+
+	        {% endblock %}
+	    </div>
+     </div>
+
+    <footer>    
+    	{% block pie %}{% endblock %}
+    </footer>
+	
+</body>
+</html>

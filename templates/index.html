@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+    {% for post in lista_posts %}
+        <div class="span4">
+        	<h2><a href="{{post.get_absolute_url}}">{{post.titulo}}</a></h2>
+        	<p>
+        		{{post.contenido|striptags}}<br>
+        	</p>
+        	<p>
+        		<a class="btn" href="{{post.get_absolute_url}}">Ver detalle</a>
+            </p>
+        	<br>
+        </div>
+    {% endfor %}
+
+{% endblock %}
