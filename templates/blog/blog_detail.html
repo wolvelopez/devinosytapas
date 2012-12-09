@@ -12,7 +12,7 @@
         Archivos adjuntos: <br>
         {% for archivos in object.adjunto.all %}
             <br>
-            <a href="/uploads/{{archivos.archivo}}">{{ archivos.nombre }}</a>
+            <a href="{{archivos.archivo.url}}"><img src="{{archivos.archivo.url}}" alt="{{ archivos.nombre }}"></img></a>
         {% endfor %}
     {% endif %}
 
